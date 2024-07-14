@@ -14,6 +14,23 @@ public class Book {
     private String genre;
     private int year;
     private boolean available;
+    private String imageURL;
+
+    public Book() {}
+
+    public Book(int id) {
+        this.id = id;
+    }
+
+    public Book(int id, String title, String author, String genre, int year, boolean available, String imageURL) {
+        this.id = id;
+        this.title = title;
+        this.author = author;
+        this.genre = genre;
+        this.year = year;
+        this.available = available;
+        this.imageURL = imageURL;
+    }
 
     public int getId() {
         return id;
@@ -61,5 +78,13 @@ public class Book {
 
     public void setAvailable(boolean available) {
         this.available = available;
+    }
+
+    public String getimageURL() {
+        return imageURL;
+    }
+
+    public void setimageURL(String imageURL) {
+        this.imageURL = imageURL;
     }
 }

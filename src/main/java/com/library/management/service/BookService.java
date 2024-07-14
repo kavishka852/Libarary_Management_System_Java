@@ -5,8 +5,8 @@ import com.library.management.repository.BookRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.math.BigInteger;
 import java.util.List;
+import java.util.Optional;
 
 @Service
 public class BookService {
@@ -28,4 +28,9 @@ public class BookService {
     public void deleteBook(int id) {
         bookRepository.deleteById(id);
     }
+
+    public Book upadteBooks(Book book){
+        return bookRepository.save(book);
+    }
+
 }
